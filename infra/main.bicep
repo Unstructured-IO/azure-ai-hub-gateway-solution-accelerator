@@ -145,7 +145,7 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 350
+          capacity: 700
         }
       }
       {
@@ -169,7 +169,7 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 350
+          capacity: 700
         }
       }
       {
@@ -177,11 +177,11 @@ param openAiInstances object = {
         model: {
           format: 'OpenAI'
           name: 'gpt-4o'
-          version: '2024-05-13'
+          version: '2024-08-06'
         }
         sku: {
           name: 'GlobalStandard'
-          capacity: 700
+          capacity: 1500
         }
       }
     ]
