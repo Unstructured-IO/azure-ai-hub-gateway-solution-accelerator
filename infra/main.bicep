@@ -1017,7 +1017,7 @@ param usageProcessingLogicAppName string = ''
 // Load abbreviations from JSON file
 var abbrs = loadJsonContent('./abbreviations.json')
 // Generate a unique token for resources
-var resourceToken = '${environmentName}-${toLower(uniqueString(subscription().id, environmentName, location))}'
+var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
 
 // Organize resources in a resource group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
@@ -1176,7 +1176,7 @@ module apim './modules/apim/apim.bicep' = {
   name: 'apim'
   scope: resourceGroup
   params: {
-    name: !empty(apimServiceName) ? apimServiceName : '${abbrs.apiManagementService}${resourceToken}'
+    name: !empty(apimServiceName) ? apimServiceName : '${abbrs.apiManagementService}-${environmentName}-${resourceToken}'
     location: location
     tags: tags
     applicationInsightsName: monitoring.outputs.applicationInsightsName
