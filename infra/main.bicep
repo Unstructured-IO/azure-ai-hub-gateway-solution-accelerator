@@ -899,6 +899,36 @@ param openAiInstances object = {
       }
     ]
   }
+  openAi19: {
+    name: 'openai19'
+    location: 'southafricanorth'
+    deployments: [
+      {
+        name: 'Text-Embedding-Ada-002'
+        model: {
+          format: 'OpenAI'
+          name: 'text-embedding-ada-002'
+          version: '2'
+        }
+        sku: {
+          name: 'Standard'
+          capacity: 350
+        }
+      }
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
+        }
+      }
+    ]
+  }
 }
 
 param enableAzureAISearch bool = true
