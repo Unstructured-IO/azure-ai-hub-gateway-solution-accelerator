@@ -851,6 +851,24 @@ param openAiInstances object = {
       }
     ]
   }
+  openAi17: {
+    name: 'openai17'
+    location: 'westeurope'
+    deployments: [
+      {
+        name: 'Text-Embedding-Ada-002'
+        model: {
+          format: 'OpenAI'
+          name: 'text-embedding-ada-002'
+          version: '2'
+        }
+        sku: {
+          name: 'Standard'
+          capacity: 700
+        }
+      }
+    ]
+  }
 }
 
 param enableAzureAISearch bool = true
