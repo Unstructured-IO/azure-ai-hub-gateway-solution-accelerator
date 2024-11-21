@@ -977,6 +977,24 @@ param openAiInstances object = {
       }
     ]
   }
+  openAi22: {
+    name: 'openai22'
+    location: 'koreacentral'
+    deployments: [
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
+        }
+      }
+    ]
+  }
 }
 
 param enableAzureAISearch bool = true
