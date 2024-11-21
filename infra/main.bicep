@@ -959,6 +959,24 @@ param openAiInstances object = {
       }
     ]
   }
+  openAi21: {
+    name: 'openai21'
+    location: 'spaincentral'
+    deployments: [
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
+        }
+      }
+    ]
+  }
 }
 
 param enableAzureAISearch bool = true
