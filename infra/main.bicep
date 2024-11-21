@@ -653,6 +653,48 @@ param openAiInstances object = {
       }
     ]
   }
+  openAi12: {
+    name: 'openai12'
+    location: 'southindia'
+    deployments: [
+      {
+        name: 'text-embedding-3-large'
+        model: {
+          format: 'OpenAI'
+          name: 'text-embedding-3-large'
+          version: '1'
+        }
+        sku: {
+          name: 'Standard'
+          capacity: 700
+        }
+      }
+      {
+        name: 'Text-Embedding-Ada-002'
+        model: {
+          format: 'OpenAI'
+          name: 'text-embedding-ada-002'
+          version: '2'
+        }
+        sku: {
+          name: 'Standard'
+          capacity: 700
+        }
+      }
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
+        }
+      }
+    ]
+  }
 }
 
 param enableAzureAISearch bool = true
