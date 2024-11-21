@@ -214,6 +214,18 @@ param openAiInstances object = {
         }
       }
       {
+        name: 'text-embedding-3-small'
+        model: {
+          format: 'OpenAI'
+          name: 'text-embedding-3-small'
+          version: '1'
+        }
+        sku: {
+          name: 'Standard'
+          capacity: 700
+        }
+      }
+      {
         name: 'Text-Embedding-Ada-002'
         model: {
           format: 'OpenAI'
@@ -222,7 +234,7 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 350
+          capacity: 700
         }
       }
       {
@@ -230,11 +242,11 @@ param openAiInstances object = {
         model: {
           format: 'OpenAI'
           name: 'gpt-4o'
-          version: '2024-05-13'
+          version: '2024-08-06'
         }
         sku: {
           name: 'GlobalStandard'
-          capacity: 700
+          capacity: 900
         }
       }
     ]
@@ -276,7 +288,19 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 240
+          capacity: 700
+        }
+      }
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
         }
       }
     ]
@@ -286,6 +310,18 @@ param openAiInstances object = {
     location: 'westus'
     deployments: [
       {
+        name: 'text-embedding-3-small'
+        model: {
+          format: 'OpenAI'
+          name: 'text-embedding-3-small'
+          version: '1'
+        }
+        sku: {
+          name: 'Standard'
+          capacity: 350
+        }
+      }
+      {
         name: 'Text-Embedding-Ada-002'
         model: {
           format: 'OpenAI'
@@ -294,7 +330,19 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 350
+          capacity: 700
+        }
+      }
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
         }
       }
     ]
@@ -312,7 +360,19 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 240
+          capacity: 700
+        }
+      }
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
         }
       }
     ]
@@ -330,7 +390,19 @@ param openAiInstances object = {
         }
         sku: {
           name: 'Standard'
-          capacity: 350
+          capacity: 700
+        }
+      }
+      {
+        name: 'gpt-4o'
+        model: {
+          format: 'OpenAI'
+          name: 'gpt-4o'
+          version: '2024-08-06'
+        }
+        sku: {
+          name: 'GlobalStandard'
+          capacity: 900
         }
       }
     ]
