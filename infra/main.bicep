@@ -461,7 +461,7 @@ param openAiInstances object = {
       }
     ]
   }
-  openAi7: {
+  openAi8: {
     name: 'openai8'
     location: 'japaneast'
     deployments: [
