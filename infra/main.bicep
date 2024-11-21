@@ -1017,7 +1017,7 @@ param usageProcessingLogicAppName string = ''
 // Load abbreviations from JSON file
 var abbrs = loadJsonContent('./abbreviations.json')
 // Generate a unique token for resources
-var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
+var resourceToken = '${environmentName}-${toLower(uniqueString(subscription().id, environmentName, location))}'
 
 // Organize resources in a resource group
 resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
