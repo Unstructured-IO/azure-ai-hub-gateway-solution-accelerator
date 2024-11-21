@@ -126,17 +126,6 @@ param openAiInstances object = {
     location: 'eastus2'
     deployments: [
       {
-        name: chatGptDeploymentName
-        model: {
-          format: 'OpenAI'
-          name: chatGptModelName
-          version: chatGptModelVersion
-        }
-        scaleSettings: {
-          scaleType: 'Standard'
-        }
-      }
-      {
         name: 'text-embedding-3-large'
         model: {
           format: 'OpenAI'
@@ -173,11 +162,11 @@ param openAiInstances object = {
         }
       }
       {
-        name: 'gpt-4o'
+        name: chatGptDeploymentName
         model: {
           format: 'OpenAI'
-          name: 'gpt-4o'
-          version: '2024-08-06'
+          name: chatGptModelName
+          version: chatGptModelVersion
         }
         sku: {
           name: 'GlobalStandard'
@@ -190,17 +179,6 @@ param openAiInstances object = {
     name: 'openai2'
     location: 'westus3'
     deployments: [
-      {
-        name: chatGptDeploymentName
-        model: {
-          format: 'OpenAI'
-          name: chatGptModelName
-          version: chatGptModelVersion
-        }
-        scaleSettings: {
-          scaleType: 'Standard'
-        }
-      }
       {
         name: 'text-embedding-3-large'
         model: {
@@ -1008,7 +986,7 @@ param openAiSkuName string = 'S0'
 param chatGptModelVersion string = '2024-08-06'
 
 @description('Name of the Chat GPT deployment.')
-param chatGptDeploymentName string = 'chat'
+param chatGptDeploymentName string = 'gpt-4o'
 
 @description('Name of the Chat GPT model.')
 param chatGptModelName string = 'gpt-4o'
