@@ -963,7 +963,7 @@ param openAiInstances object = {
   }
 }
 
-param enableAzureAISearch bool = true
+param enableAzureAISearch bool = false
 
 @description('Object containing AI Search existing instances. You can add more instances by adding more objects to this parameter.')
 param aiSearchInstances array = [
