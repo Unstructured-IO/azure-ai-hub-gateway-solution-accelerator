@@ -1176,7 +1176,7 @@ module apim './modules/apim/apim.bicep' = {
   name: 'apim'
   scope: resourceGroup
   params: {
-    name: !empty(apimServiceName) ? apimServiceName : '${abbrs.apiManagementService}-${environmentName}-${resourceToken}'
+    name: !empty(apimServiceName) ? apimServiceName : '${abbrs.apiManagementService}${environmentName}-${resourceToken}'
     location: location
     tags: tags
     applicationInsightsName: monitoring.outputs.applicationInsightsName
